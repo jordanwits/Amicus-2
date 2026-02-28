@@ -100,8 +100,21 @@
 }
 
 @media (max-width: 900px) {
+  .header {
+    padding: 0.375rem var(--spacing-md);
+  }
+
+  .logo-img {
+    height: 56px;
+  }
+
   .menu-toggle {
     display: flex;
+    padding: 6px;
+  }
+
+  .menu-toggle-bar {
+    width: 22px;
   }
 
   .nav {
@@ -117,6 +130,30 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .nav-close {
+    position: absolute;
+    top: 0.75rem;
+    right: var(--spacing-md);
+    padding: 8px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--color-text);
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .nav-close:hover,
+  .nav-close:focus-visible {
+    opacity: 1;
+  }
+
+  .nav-close:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 4px;
   }
 
   .nav--open {

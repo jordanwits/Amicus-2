@@ -31,6 +31,13 @@ function Layout({ children }) {
           <span className="menu-toggle-bar" />
         </button>
         <nav className={`nav ${menuOpen ? 'nav--open' : ''}`}>
+          <button
+            className="nav-close"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            ×
+          </button>
           {navLinks.map(({ path, label }) => (
             <Link
               key={path}
