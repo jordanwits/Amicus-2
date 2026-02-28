@@ -1,0 +1,224 @@
+.accommodations-page {
+  padding: 0;
+}
+
+.accommodations-page .content-divider {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.4em;
+}
+
+.accommodations-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accommodations-hero-image {
+  position: absolute;
+  inset: 0;
+}
+
+.accommodations-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.accommodations-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(44, 44, 44, 0.25) 0%,
+    rgba(44, 44, 44, 0.5) 100%
+  );
+}
+
+.accommodations-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+.accommodations-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--color-white);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  margin: 0 0 var(--spacing-sm);
+  letter-spacing: 0.05em;
+}
+
+.accommodations-hero .content-divider {
+  color: rgba(255, 255, 255, 0.8);
+  margin: var(--spacing-md) auto;
+}
+
+.accommodations-hero-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.accommodations-intro {
+  padding: var(--spacing-xl) var(--spacing-md);
+  background-color: var(--color-white);
+}
+
+.accommodations-intro-inner {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
+
+.accommodations-intro-text {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--color-text-muted);
+  margin: 0;
+  text-align: center;
+}
+
+.accommodations-rooms {
+  padding: var(--spacing-xl) var(--spacing-md);
+  background-color: var(--color-white-soft);
+}
+
+.room-card {
+  max-width: var(--max-wide-width);
+  margin: 0 auto var(--spacing-2xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.room-card:nth-child(even) {
+  direction: rtl;
+}
+
+.room-card:nth-child(even) > * {
+  direction: ltr;
+}
+
+.room-card-image {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.room-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.room-card-content {
+  padding: var(--spacing-lg);
+}
+
+.room-card-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-xs);
+  letter-spacing: 0.04em;
+}
+
+.content-divider--small {
+  margin: var(--spacing-sm) 0;
+  font-size: 1rem;
+}
+
+.room-card-description {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--spacing-md);
+}
+
+.room-card-features {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-text);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.room-card-features li {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-accent);
+  border-radius: var(--radius-sm);
+}
+
+.accommodations-cta {
+  padding: var(--spacing-xl) var(--spacing-md);
+  background-color: var(--color-secondary);
+}
+
+.accommodations-cta-inner {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.accommodations-cta-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--spacing-lg);
+}
+
+.accommodations-cta-button {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.accommodations-cta-button:hover,
+.accommodations-cta-button:focus-visible {
+  background-color: var(--color-text);
+  color: var(--color-secondary);
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .room-card,
+  .room-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .room-card-image {
+    aspect-ratio: 16/10;
+  }
+}
