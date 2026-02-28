@@ -173,6 +173,9 @@ function Home() {
             Share a few words below, and we'll be in touch.
           </p>
           <div className="home-contact-form-wrapper">
+            <div className="home-contact-watermark" aria-hidden="true">
+              <img src="/AMICUS%20HOUSE%20Logo%20(3).png" alt="" />
+            </div>
             <ContactForm />
           </div>
         </div>

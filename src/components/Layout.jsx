@@ -18,7 +18,7 @@ function Layout({ children }) {
     <div className="layout">
       <header className="header">
         <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>
-          <img src="/logo.png" alt="Amicus" className="logo-img" />
+          <img src="/AMICUS%20HOUSE%20Logo%20(2).png" alt="Amicus" className="logo-img" />
         </Link>
         <button
           className="menu-toggle"

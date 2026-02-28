@@ -311,6 +311,22 @@
   text-align: center;
 }
 
+.home-contact-watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.home-contact-watermark img {
+  width: min(45vw, 440px);
+  height: auto;
+  opacity: 0.08;
+  object-fit: contain;
+}
+
 .home-contact-title {
   font-family: var(--font-heading);
   font-size: clamp(1.5rem, 2.5vw, 1.85rem);
@@ -336,13 +352,17 @@
 }
 
 .home-contact-form-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 480px;
   margin: 0 auto;
   padding: var(--spacing-lg);
   background-color: var(--color-white-soft);
   border-radius: var(--radius-lg);
   border: 1px solid rgba(44, 44, 44, 0.08);
-  text-align: left;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
